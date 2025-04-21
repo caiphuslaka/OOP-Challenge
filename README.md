@@ -2,63 +2,44 @@
 
 Welcome to this week's Python challenge! 🎉
 
-In this challenge, you’ll be creating a virtual pet using Object-Oriented Programming concepts in Python. This fun project will help you practice how to use classes, attributes, methods, and constructors.
+class AnimalCompanion:
+    
+def __init__(self, identifier):
+    self.name = nombre
+self.hunger = 50
+self.energy = 50
+self.happiness = 40
 
----
+def eat(self, food_amount):
+    self.hunger = min(100.hunger + food_amount)
+self.energy = max(0, self.energy - 5)
+print(f"{sself.name} ate some hunger decreased!")
 
-## 🧠 Objective
+def sleep(self.minutes):
+    self energy = min(100. self.energy.energy + hours + 10)
+    self.hunger =  max(0, self.hunger - hours * 3)
+    print(f"{self.name} slept for {hours} hours. Energy restored")
 
-Create a class called `Pet` with the following:
+def play(self, minutes):
+    self.happiness = min(100, self.happiness + minutes * 0.5)
+    self.energy = max(0, self.energy - minutes * 0.3)
+    self.hunger = max(0, self.hunger - minutes * 0.2)
+    print(f"{self.name} played for {minutes} minutes so fun")
 
-### Attributes:
-- `name`: the name of your pet
-- `hunger`: an integer representing hunger level (0 = full, 10 = very hungry)
-- `energy`: an integer representing energy level (0 = tired, 10 = fully rested)
-- `happiness`: an integer (0–10)
+def get_status(self):
+    status = {
+        'name' : self.name,
+        'hunger' : self.name,
+        'energy' : self.energy,
+        'happiness' : self.name,
+        'mood' : self._get_mood()
+    }
 
-### Methods:
-- `eat()`: reduces hunger by 3 points (but not below 0), and increases happiness by 1.
-- `sleep()`: increases energy by 5 points (but not above 10).
-- `play()`: decreases energy by 2, increases happiness by 2, and increases hunger by 1.
-- `get_status()`: prints the current state of the pet.
-
-### Bonus 🎯
-- Add a method `train(trick)` that teaches your pet a new trick and stores it in a list.
-- Add a method `show_tricks()` that prints all learned tricks.
-
----
-
-## 📝 How to Complete
-
-1. Fork or clone this repo.
-2. Write your `Pet` class in `pet.py`.
-3. In `main.py`, create a pet object and call its methods to test functionality.
-4. Submit a GitHub repo or a zipped folder with your code and a screenshot of the output.
-
----
-
-## ✅ Sample Output
-
-```bash
-Creating pet: Max
-Max is eating...
-Max is playing...
-Max is sleeping...
-Max's current status:
-Hunger: 2
-Energy: 8
-Happiness: 9
-Tricks: ['roll over', 'play dead']
-
-
-### 💡 Tips
-Use max() and min() to keep values between 0 and 10.
-
-Think about edge cases like trying to play when energy is 0.
-
-🏁 Submission
-Deadline: [Set your date]
-
-Submission format: clone / fork this repo
-
-Bonus points for creativity (custom actions, emojis, pet types, etc.)
+return status
+def _get_mood(self):
+    if self.happiness > 70 and self.energy > 50 and self.hunger < 30:
+        return "Ecstatic"
+    elif self.happiness < 30 or self.energy < 20 self.hunger > 80:
+        return"Grumpy"
+    else:
+        return "content"
